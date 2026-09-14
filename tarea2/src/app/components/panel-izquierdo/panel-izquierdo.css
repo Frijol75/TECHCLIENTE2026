@@ -1,0 +1,39 @@
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.lista {
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.elemento {
+  padding: 18px 20px;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.elemento:last-child {
+  border-bottom: none;
+}
+
+.elemento:hover {
+  background-color: #f3f4f6;
+  padding-left: 25px;
+}
+
+.elemento.seleccionado {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+  border-left: 5px solid #2563eb;
+  padding-left: 15px;
+}

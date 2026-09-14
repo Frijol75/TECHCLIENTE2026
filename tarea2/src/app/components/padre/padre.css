@@ -1,0 +1,18 @@
+.contenedor {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.panel {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .contenedor {
+    flex-direction: column;
+    margin: 30px auto;
+  }
+}

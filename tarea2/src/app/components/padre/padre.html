@@ -1,0 +1,16 @@
+<div class="contenedor">
+
+  <div class="panel">
+    <app-panel-izquierdo
+      (tituloSeleccionado)="seleccionarTitulo($event)">
+    </app-panel-izquierdo>
+  </div>
+
+  <div class="panel">
+    <app-panel-derecho
+      [titulo]="tituloSeleccionado"
+      (limpiar)="limpiarSeleccion()">
+    </app-panel-derecho>
+  </div>
+
+</div>
