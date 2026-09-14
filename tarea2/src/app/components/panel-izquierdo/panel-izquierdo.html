@@ -1,0 +1,15 @@
+<h2>Lista de títulos</h2>
+
+<div class="lista">
+
+  @for (titulo of titulos; track titulo) {
+    <div
+      class="elemento"
+      [class.seleccionado]="titulo === tituloSeleccionadoActual"
+      (click)="seleccionarTitulo(titulo)"
+    >
+      {{ titulo }}
+    </div>
+  }
+
+</div>

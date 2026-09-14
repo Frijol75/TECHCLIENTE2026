@@ -1,0 +1,69 @@
+<div class="detalle">
+
+  @if (titulo) {
+
+    <span class="etiqueta">PELÍCULA SELECCIONADA</span>
+
+    <h3>{{ titulo }}</h3>
+
+    @if (titulo === 'Harry Potter') {
+      <p>
+        Un joven mago descubre su verdadera historia y comienza su aventura
+        en el Colegio Hogwarts de Magia y Hechicería.
+      </p>
+    }
+
+    @if (titulo === 'El Señor de los Anillos') {
+      <p>
+        Frodo emprende un peligroso viaje para destruir el Anillo Único
+        antes de que caiga en manos del Señor Oscuro Sauron.
+      </p>
+    }
+
+    @if (titulo === 'Dune') {
+      <p>
+        Paul Atreides viaja al planeta Arrakis, un mundo desértico que guarda
+        un recurso extremadamente valioso y que cambiará su destino para siempre.
+      </p>
+    }
+
+    @if (titulo === '1984') {
+      <p>
+        En una sociedad controlada por un régimen totalitario, Winston Smith
+        comienza a cuestionar el sistema que controla cada aspecto de la vida.
+      </p>
+    }
+
+    @if (titulo === 'El Hobbit') {
+      <p>
+        Bilbo Bolsón abandona su tranquila vida para acompañar a un grupo de
+        enanos en una aventura para recuperar el reino perdido de Erebor.
+      </p>
+    }
+
+    @if (titulo === 'Cien años de soledad') {
+      <p>
+        La historia de varias generaciones de la familia Buendía y los
+        acontecimientos extraordinarios que ocurren en Macondo.
+      </p>
+    }
+
+    <button (click)="limpiarSeleccion()">
+      Limpiar selección
+    </button>
+
+  } @else {
+
+    <div class="sin-seleccion">
+      <div class="icono">🎬</div>
+
+      <h3>No hay ninguna película seleccionada</h3>
+
+      <p>
+        Selecciona una película de la lista para ver sus detalles.
+      </p>
+    </div>
+
+  }
+
+</div>
