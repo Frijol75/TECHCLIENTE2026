@@ -1,0 +1,29 @@
+<article class="card" appHoverHighlight>
+  <a class="poster" [routerLink]="['/movies', movie.id]" [attr.aria-label]="'Ver detalle de ' + movie.title">
+    <img [src]="movie.poster" [alt]="'Póster de ' + movie.title" appPosterFallback loading="lazy" />
+    @if (isFavorite) {
+      <span class="badge" title="En tus favoritos">★</span>
+    }
+  </a>
+
+  <div class="body">
+    <span class="genre">{{ movie.genre }}</span>
+    <h3 class="title">
+      <a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a>
+    </h3>
+    <p class="meta">{{ movie.year }} · {{ movie.director }}</p>
+    <p class="description">{{ movie.description }}</p>
+
+    <div class="actions">
+      <a class="btn btn-ghost" [routerLink]="['/movies', movie.id]">Ver detalle</a>
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="isFavorite ? 'btn-danger' : 'btn-primary'"
+        (click)="onToggleFavorite()"
+      >
+        {{ isFavorite ? 'Quitar' : '★ Favorito' }}
+      </button>
+    </div>
+  </div>
+</article>
