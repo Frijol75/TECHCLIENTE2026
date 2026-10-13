@@ -1,0 +1,33 @@
+<form class="filters" [formGroup]="form" role="search" aria-label="Filtrar películas">
+  <label class="field">
+    <span>Título</span>
+    <input type="text" formControlName="title" placeholder="Ej. Inception" autocomplete="off" />
+  </label>
+
+  <label class="field">
+    <span>Director</span>
+    <input type="text" formControlName="director" placeholder="Ej. Nolan" autocomplete="off" />
+  </label>
+
+  <label class="field">
+    <span>Productor</span>
+    <input type="text" formControlName="producer" placeholder="Ej. Emma Thomas" autocomplete="off" />
+  </label>
+
+  <label class="field">
+    <span>Género</span>
+    <select formControlName="genre">
+      <option value="">Todos</option>
+      @for (genre of genres; track genre) {
+        <option [value]="genre">{{ genre }}</option>
+      }
+    </select>
+  </label>
+
+  <label class="field">
+    <span>Año</span>
+    <input type="text" inputmode="numeric" formControlName="year" placeholder="Ej. 1994" autocomplete="off" />
+  </label>
+
+  <button type="button" class="btn btn-ghost clear" (click)="reset()">Limpiar</button>
+</form>
